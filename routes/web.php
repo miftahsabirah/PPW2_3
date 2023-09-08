@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,8 @@ Route::get('/dataDiri', function () {
 Route::get('/asalSekolah', function () {
     return view('AsalSekolah', array('sekolahAsal' => 'SMP 21', 'alamatSekolah' => 'Jalan majujaya nomor xx'));
 });
+
+Route::get('/boom', [PostController::class,'boomesport']);
+
+Route::get('/testimoni', [PostController::class,'seeTravel']);
+
